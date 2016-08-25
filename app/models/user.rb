@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-has_one :stat
+has_many :stats
 belongs_to :team
 
 end
