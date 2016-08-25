@@ -4,7 +4,7 @@ class CreateTeams < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :mascot
       t.integer :num_players
-      t.integer :game_id
+
 
       t.timestamps
     end
