@@ -13,7 +13,9 @@ end
 
 
 40.times do
+
   User.create(name: Faker::Internet.user_name, email: Faker::Internet.email, password_hash: Faker::Internet.password, captain: false, team_id: 1 + rand(16))
+
 end
 
 #User.create(name: Faker::Internet.user_name, email: Faker::Internet.email, password_hash: #Faker::Internet.password, captain: true, team_id: 2)
