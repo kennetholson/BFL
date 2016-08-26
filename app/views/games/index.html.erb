@@ -1,0 +1,10 @@
+
+	<% @games.each do |game| %>
+<ul>
+
+<li><%=game.location%></li>
+<li><%=game.time%></li>
+ <li><%= link_to 'Show', game_path(game) %></li>
+</ul>
+<%end%>
+

@@ -1,0 +1,12 @@
+<%=@game.time%><br>
+<%=@game.location%>
+
+<div id="google-map">
+	<iframe
+  width="300"
+  height="250"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=<%=ENV['GOOGLE_KEY']%>
+    &q=,<%= @game.location%>" allowfullscreen>
+</iframe>
+</div>
