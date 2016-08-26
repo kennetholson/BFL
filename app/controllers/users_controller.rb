@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-
   def index
     # @team = Team.find(params[:team_id])
     # @users = @team.users(params[:id])
@@ -17,8 +16,6 @@ class UsersController < ApplicationController
     # @user = @team.users.find(params[:id])
     @user = User.find(params[:id])
   end
-
-
 
   def create
     # @team = Team.find(params[:team_id])
@@ -37,9 +34,9 @@ class UsersController < ApplicationController
   # end
 end
 
-  def edit
-    @user = User.find(params[:id])
-  end
+def edit
+  @user = User.find(params[:id])
+end
 
 def update
   @user = User.find(params[:id])
@@ -49,6 +46,7 @@ def update
    render 'edit'
  end
 end
+
 
 
 private

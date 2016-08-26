@@ -27,12 +27,18 @@
         <a class="navbar-brand" href="/">Bovine Frisbee League</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><%= link_to "Profile", user_path(current_user) %></li>
+        <% if current_user %>
+          <li class="active"><%= link_to "Profile", user_path(current_user) %></li>
+        <% end %>
         <li><%= link_to "Stats", stats_path %></li>
         <li><%= link_to "Schedule", games_path %></li>
         <li><%= link_to "Standings", rankings_path %></li>
         <li><%= link_to "Teams", teams_path %></li>
-        <li><%= link_to "Login", new_session_path %></li>
+        <% if !current_user %>
+          <li><%= link_to "Login", new_session_path %></li>
+        <% else %>
+          <li><%= link_to "Logout", session_path(current_user), :method => :delete %>
+        <% end %>
       </ul>
     </div>
   </nav>
