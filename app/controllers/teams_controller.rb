@@ -13,6 +13,7 @@ class TeamsController < ApplicationController
 
   def edit
     @team = Team.find(params[:id])
+    @users = User.all 
   end
 
   def create

@@ -1,0 +1,10 @@
+<%= @team.inspect %>
+<%= form_for :user do |f| %>
+
+	<div id="add-player">
+		<%= f.label :Players, class: 'control-group' %>
+		<%= collection_select( :user, :team_id, User.all, :id, :name, {}, { :multiple => false}) %>
+
+	<%= f.submit "Add Player" %>
+	</div>
+<% end %>

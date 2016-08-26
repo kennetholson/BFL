@@ -6,17 +6,19 @@ class UsersController < ApplicationController
     # @users = @team.users(params[:id])
   end
 
+  def new
+    # # @team = Team.find(params[:team_id])
+    # @user = @team.users.new
+    @user = User.new
+  end
+
   def show
     # @team = Team.find(params[:team_id])
     # @user = @team.users.find(params[:id])
     @user = User.find(params[:id])
   end
 
-  def new
-    # # @team = Team.find(params[:team_id])
-    # @user = @team.users.new
-    @user = User.new
-  end
+
 
   def create
     # @team = Team.find(params[:team_id])
@@ -35,7 +37,10 @@ class UsersController < ApplicationController
   # end
 end
 
-
+  def edit 
+    @user = User.find(params[:id])
+  end
+  
 def update
   @user = User.find(params[:id])
   if @user.update(user_params)
