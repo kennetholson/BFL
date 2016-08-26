@@ -2,7 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#background {
- background: url('images/frisbee.jpg') no-repeat;
- height: 100vh;
+.image-container {
+  height: 800px;
+}
+
+#background-frisbee {
+  height: 100%;
+  width: 100%;
+  /*background-color: green;*/
+  background-image: url("frisbee.jpg");
+  background-repeat: no-repeat;
 }
