@@ -13,13 +13,10 @@ Rails.application.routes.draw do
     resources :rankings
   end
 
-  resources :users do
-    resources :stats
-  end
 
   resources :stats
 
-  resources :rankings
+  
 
   resources :sessions
 
