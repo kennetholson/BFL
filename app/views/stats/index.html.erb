@@ -1,9 +1,10 @@
-<h1>Listing Stats</h1>
+<h1>Listing Stats For all Players</h1>
  
- <%= link_to 'New Stat', new_stat_path %>
+
 
 <table>
   <tr>
+    <th>Name</th>
     <th>Number of Throws</th>
     <th>Number of Catches</th>
     <th>Points</th>
@@ -12,13 +13,12 @@
  
   <% @stats.each do |stat| %>
     <tr>
+      <td><%= stat.user.name %></td>
       <td><%= stat.num_throw %></td>
       <td><%= stat.num_catches %></td>
       <td><%= stat.points %></td>
       <td><%= stat.distance_ran %></td>
-      <td><%= link_to 'Destroy', stat_path(stat),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>      
+          
     </tr>
   <% end %>
 </table>
