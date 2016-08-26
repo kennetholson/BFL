@@ -1,12 +1,15 @@
 <h1>Signup Today</h1>
 
 <div align="center">
-  <%= form_for :user, url: '/users' do |f| %>
+  <!-- <%#= form_for :user, url: '/users' do |f| %> -->
+  <%= form_for @user do |f| %>
+
 
   Name: <%= f.text_field :name %><br>
   Email: <%= f.text_field :email %><br>
   Password: <%= f.password_field :password %><br>
   Password Confirmation: <%= f.password_field :password_confirmation %><br>
+  Choose a Team: <%= f.text_field :team_id %><br>
   <%= f.submit "Submit" %>
 
   <% end %>
