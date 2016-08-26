@@ -60,11 +60,11 @@ ActiveRecord::Schema.define(version: 20160825173927) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "password_hash"
+    t.string   "password_digest"
     t.boolean  "captain"
     t.integer  "team_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

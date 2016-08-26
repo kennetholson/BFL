@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	def update 
+	def update
 		@user = User.find(params[:id])
 
 		if @user.update(user_params)
@@ -13,13 +13,21 @@ class UsersController < ApplicationController
  def new
  end
 
+ def show
+  @user = User.new
+ end
+
  def create
-  user = User.new(user_params)
-  if user.save
-    session[:user_id] = user.id
-    redirect_to '/'
+  if params[:user][:password] != params[:user][:password_confirmation]
+    @errors = ["ERROR: Passwords Don't Match!"]
   else
-    redirect_to '/signup'
+    user = User.new(user_params)
+    if user.save
+      session[:user_id] = user.id
+      redirect_to "/users/#{user.id}"
+    else
+      redirect_to '/'
+    end
   end
 end
 
