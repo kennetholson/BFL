@@ -1,0 +1,20 @@
+<p>
+  <strong>Team Name:</strong>
+  <%= @team.name %>
+</p>
+ 
+<p>
+  <strong>Mascot Name:</strong>
+  <%= @team.mascot %>
+</p>
+
+ <!-- embeds a partial -->
+<h2>Roster</h2>
+<% @team.users.each do |user| %>
+	<p><%= user.name %></p> 
+<% end %>
+
+
+
+<td><%= link_to 'Edit', edit_team_path(@team) %></td>
+<%= link_to 'Back', teams_path %> 
