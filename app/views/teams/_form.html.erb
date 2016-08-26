@@ -23,8 +23,10 @@
 		<%= f.text_field :mascot %>
 	</p>
 
+
 	<p>
 		<%= f.submit %>
 	</p>
+<%= render 'addPlayer', locals: {team: @team}%>
 
 <% end %>
