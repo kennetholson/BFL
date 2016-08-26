@@ -1,0 +1,20 @@
+<h1>Listing Teams</h1>
+ 
+ <%= link_to 'New Team', new_team_path %>
+
+<table>
+  <tr>
+    <th>Team Name</th>
+    <th>Mascot</th>
+  </tr>
+ 
+  <% @teams.each do |team| %>
+    <tr>
+      <td><%= link_to"#{team.name}", team_path(team) %></td>
+      <td><%= team.mascot %></td>
+      <td><%= link_to 'Destroy', team_path(team),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>      
+    </tr>
+  <% end %>
+</table>
