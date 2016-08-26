@@ -1,3 +1,11 @@
 
-<h1><%= @user.name %></h1>
+<h1><%= @user.name %>'s Player Profile</h1>
+
+<h2><strong>Team: <%= @user.team.name %></strong></h2>
+
+<% @user.stats.each do |stats| %>
+	<p>Number of Throws: <%= stats.num_throw%></p>
+	<p>Number of Catches: <%= stats.num_catches%></p>
+	<p>Distance Ran: <%= stats.distance_ran%></p>
+<% end %>
 
