@@ -17,6 +17,10 @@ Rails.application.routes.draw do
     resources :stats
   end
 
+  resources :stats
+
+  resources :rankings
+
   resources :sessions
 
   root 'welcome#index'
