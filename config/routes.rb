@@ -9,14 +9,12 @@ Rails.application.routes.draw do
     resources :teams
   end
 
-  resources :teams do
-    resources :rankings
-  end
+
 
 
   resources :stats
 
-  
+  resources :rankings
 
   resources :sessions
 

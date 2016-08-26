@@ -2,7 +2,9 @@
 
 class RankingsController < ApplicationController
   def index
-    @rankings = Ranking.all
+      
+
+  		@rankings =Ranking.all
   end
 
   def show

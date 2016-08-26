@@ -1,0 +1,25 @@
+<p>
+  <strong>Team Name:</strong>
+  <%= @ranking.team.name %>
+</p>
+ 
+<p>
+  <strong>Wins:</strong>
+  <%= @ranking.win %>
+</p>
+<p>
+  <strong>Losses:</strong>
+  <%= @ranking.lose %>
+</p>
+ 
+<p>
+  <strong>Ties:</strong>
+  <%= @ranking.tie %>
+</p>
+
+
+
+
+
+<td><%= link_to 'Edit', edit_ranking_path(@ranking) %></td>
+<%= link_to 'Back', rankings_path %> 
