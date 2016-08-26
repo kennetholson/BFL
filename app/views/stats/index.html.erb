@@ -1,0 +1,24 @@
+<h1>Listing Stats For all Players</h1>
+ 
+
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Number of Throws</th>
+    <th>Number of Catches</th>
+    <th>Points</th>
+    <th>Distance Ran</th>
+  </tr>
+ 
+  <% @stats.each do |stat| %>
+    <tr>
+      <td><%= stat.user.name %></td>
+      <td><%= stat.num_throw %></td>
+      <td><%= stat.num_catches %></td>
+      <td><%= stat.points %></td>
+      <td><%= stat.distance_ran %></td>
+          
+    </tr>
+  <% end %>
+</table>

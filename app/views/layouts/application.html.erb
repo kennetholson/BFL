@@ -27,12 +27,12 @@
         <a class="navbar-brand" href="/">Bovine Frisbee League</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Profile</a></li>
-        <li><a href="/stats">Stats</a></li>
-        <li><a href="/games">Schedule</a></li>
-        <li><a href="/rankings">Standings</a></li>
-        <li><a href="/teams/">Teams</a></li>
-        <li><a href="/sessions/new">Login</a></li>
+        <li class="active"><%= link_to "Profile", user_path(current_user) %></li>
+        <li><%= link_to "Stats", stats_path %></li>
+        <li><%= link_to "Schedule", games_path %></li>
+        <li><%= link_to "Standings", rankings_path %></li>
+        <li><%= link_to "Teams", teams_path %></li>
+        <li><%= link_to "Login", new_session_path %></li>
       </ul>
     </div>
   </nav>

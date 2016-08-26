@@ -1,0 +1,24 @@
+<h1>Listing Teams</h1>
+ 
+ <%= link_to 'New Ranking', new_ranking_path %>
+
+<table>
+  <tr>
+    <th>Team Name</th>
+    <th>Wins</th>
+    <th>Losses</th>
+    <th>Ties</th>
+  </tr>
+ 
+  <% @rankings.each do |ranking| %>
+    <tr>
+      <td><%= ranking.team.name %></td>
+      <td><%= ranking.win %></td>
+      <td><%= ranking.lose %></td>
+      <td><%= ranking.tie %></td>
+      <td><%= link_to 'Edit', edit_ranking_path(ranking),
+              method: :get,
+              data: { confirm: 'Are you sure?' } %></td>      
+    </tr>
+  <% end %>
+</table>
